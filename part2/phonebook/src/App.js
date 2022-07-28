@@ -7,9 +7,6 @@ import Persons from './components/Persons'
 
 const App = () => {
   const [persons, setPersons] = useState([
-    { name: 'Arto Hellas', 
-      number: '445-331-4419'
-    }
   ]) 
 
   const [newName, setNewName] = useState('')
@@ -91,17 +88,25 @@ const App = () => {
         contactService.getAll()
         .then(response => {
           setPersons(response.data)
+          setUpdateMsg(
+            `Added '${newName}' `
+          )
+          setTimeout(() => {
+            setUpdateMsg(null)
+          }, 5000)
+          setNewName('')
+          setNewNumber('')
         })
-      }
-      )
-      setUpdateMsg(
-        `Added '${newName}' `
-      )
-      setTimeout(() => {
-        setUpdateMsg(null)
-      }, 5000)
-      setNewName('')
-      setNewNumber('')
+      })
+      .catch(error => {
+        console.log(error.response)
+        setUpdateMsg(
+          ` Error in name or number format ${error.response.data.error}`
+        )
+        setTimeout(() => {
+          setUpdateMsg(null)
+        }, 5000)
+      })
     }
   }
   

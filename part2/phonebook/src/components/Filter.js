@@ -13,6 +13,4 @@ const Filter = ({newFilter,handleNewFilter}) => {
     )
 }
 
-
-
 export default Filter
