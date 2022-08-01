@@ -41,6 +41,8 @@ describe('when there is initially one user in db', () => {
     expect(usernames).toContain(newUser.username)
   })
 
+
+
   test('creation fails without both username and pw', async () => {
     const newUser = {
         username: 'testy',

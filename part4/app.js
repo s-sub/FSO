@@ -40,9 +40,7 @@ app.use(express.json())
 app.use(express.static('build'))
 app.use(express.json())
 app.use(middleware.tokenExtractor)
-// app.use(middleware.userExtractor)
 
-//below breaks app - to fix...
 app.use('/api/blogs', userExtractor)
 app.use('/', blogsRouter)
 app.use('/api/users', usersRouter)
@@ -51,7 +49,3 @@ app.use('/api/login', loginRouter)
 app.use(middleware.errorHandler)
 
 module.exports = app
-// const PORT = config.PORT
-// app.listen(PORT, () => {
-//   console.log(`Server running on port ${PORT}`)
-// })
