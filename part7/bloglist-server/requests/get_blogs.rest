@@ -1,0 +1,46 @@
+POST http://localhost:3003/api/blogs HTTP/1.1
+content-type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNoaXZ0ZXN0MiIsImlkIjoiNjJlNmUzMzQzYjY2NmQ5OTdiNjMyZTdlIiwiaWF0IjoxNjU5MzA3NDAyLCJleHAiOjE2NTkzMTEwMDJ9._8sHL_uYIsVlgKFbFFZBm9II2XEEMPonzVWRJ95MpfU
+
+{
+  "title": "test15",
+  "author": "dangoo",
+  "url": "gang5",
+  "likes": 2222
+}
+
+###
+POST http://localhost:3003/api/users HTTP/1.1
+content-type: application/json
+
+{
+  "username": "shivtest2",
+  "name": "trahahaha",
+  "password": "gang4"
+}
+
+###
+POST http://localhost:3003/api/login HTTP/1.1
+content-type: application/json
+
+{
+  "username": "shivtest",
+  "password": "gang4"
+}
+
+###
+DELETE http://localhost:3003/api/blogs/62e70bbc2bb0acb1175a3b18 HTTP/1.1
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNoaXZ0ZXN0MiIsImlkIjoiNjJlNmUzMzQzYjY2NmQ5OTdiNjMyZTdlIiwiaWF0IjoxNjU5MzA3NDAyLCJleHAiOjE2NTkzMTEwMDJ9._8sHL_uYIsVlgKFbFFZBm9II2XEEMPonzVWRJ95MpfU
+
+###
+PUT http://localhost:3003/api/blogs/62fbdff9821900c96fc7061d/comments HTTP/1.1
+content-type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNoaXZ0ZXN0IiwiaWQiOiI2MmU1NTE2YmQ5YjRhZmU0NzAxZjkxMjIiLCJpYXQiOjE2NjA4MzE5NjEsImV4cCI6MTY2MDg2Nzk2MX0.HaOw0QGgC75v05Y7UCm2Gif0xqczrlyH_fFXvMykyUs
+
+{
+  "comments": ["testi4"]
+}
+
+###
+GET http://localhost:3003/api/blogs/62e33d89d7aa8fef55c087f8/comments
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNoaXZ0ZXN0IiwiaWQiOiI2MmU1NTE2YmQ5YjRhZmU0NzAxZjkxMjIiLCJpYXQiOjE2NjA4MzE5NjEsImV4cCI6MTY2MDg2Nzk2MX0.HaOw0QGgC75v05Y7UCm2Gif0xqczrlyH_fFXvMykyUs
