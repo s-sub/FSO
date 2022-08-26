@@ -1,0 +1,32 @@
+###
+POST http://localhost:3001/api/patients/d2773598-f723-11e9-8f0b-362b9e155667/entries HTTP/1.1
+content-type: application/json
+
+{
+    "date": "TEStinG",
+    "type": "Hospital",
+    "specialist": "MD House2",
+    "diagnosisCodes": [
+    "S62.5"
+    ],
+    "description": "newdescjury.",
+    "discharge": {
+    "date": "testing agaain",
+    "criteria": "swawf."
+    }
+}
+
+
+
+###
+POST http://localhost:3001/api/patients/d2773598-f723-11e9-8f0b-362b9e155667/entries HTTP/1.1
+content-type: application/json
+
+{
+    "date": "2022-10-12",
+    "type": "HealthCheck",
+    "specialist": "Dr houseMD",
+    "diagnosisCodes": [],
+    "description": "hmm mdoe it work??1",
+    "healthCheckRating": "Healthy"
+}
